@@ -1,7 +1,13 @@
 package com.siit.hospital_manager.model.dto;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 import org.hibernate.validator.constraints.Range;
 
+@Getter
+@Setter
+@RequiredArgsConstructor
 public class UpdatePatientDto {
 
     Integer id;
@@ -9,19 +15,4 @@ public class UpdatePatientDto {
     @Range(min = 0, max = 120)
     private Integer age;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
 }

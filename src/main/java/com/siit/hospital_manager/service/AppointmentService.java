@@ -2,6 +2,7 @@ package com.siit.hospital_manager.service;
 
 import com.siit.hospital_manager.model.Appointment;
 import com.siit.hospital_manager.model.dto.AppointmentDto;
+import com.siit.hospital_manager.model.dto.CreateAppointmentDto;
 import com.siit.hospital_manager.repository.AppointmentsRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -28,5 +29,9 @@ public class AppointmentService {
                 .stream()
                 .map(Appointment::toDto)
                 .toList();
+    }
+
+    public void createPatient(CreateAppointmentDto createAppointmentDto) {
+        appointmentsRepository.save(new Appointment(createAppointmentDto));
     }
 }
