@@ -2,20 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hospital manager</title>
+    <title>Home page</title>
 </head>
 <body>
-
-<h2 th:text="${message}"></h2>
-<button onclick="window.location.href='/mvc/patient/viewAll';">
-    View the patients list
-</button>
-<p></p>
-<button onclick="window.location.href='/mvc/patient/create';">
-    Create a new patient
-</button>
-
-
-
+    <p th:text="${message}"></p>
+    <button onclick="window.location.href='/mvc/patient/viewAll';">View the patients list
+    </button>
+    <br>
+    <button onclick="window.location.href='/mvc/patient/create';">Create a new patient
+    </button>
 </body>
 </html>
