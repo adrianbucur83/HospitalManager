@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+
     public User createUser(CreateUserDto createUserDto) {
 
         User user = User.builder()
